@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TopViewController" customModule="PullTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-yF-WAZ">
+                                <rect key="frame" x="164" y="120" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="iOS9"/>
+                                <connections>
+                                    <action selector="ios9ButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A9e-WQ-3wd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1u5-yF-WAZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="leH-VF-NuX"/>
+                            <constraint firstItem="1u5-yF-WAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ug9-T1-8v9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="W5P-T7-fqC">
+            <objects>
+                <viewController storyboardIdentifier="ModalViewController" id="yLO-EG-d8f" customClass="ModalViewController" customModule="PullTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4d-0k-UNr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdM-2A-G42">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SnM-ht-4rK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="34l-L9-fkx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="34l-L9-fkx" secondAttribute="height" multiplier="4:3" id="n87-Ya-UjB"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="34l-L9-fkx" secondAttribute="trailing" id="N3A-TO-ieT"/>
+                                        <constraint firstItem="34l-L9-fkx" firstAttribute="top" secondItem="SnM-ht-4rK" secondAttribute="top" id="P4m-HN-ZSt"/>
+                                        <constraint firstItem="34l-L9-fkx" firstAttribute="leading" secondItem="SnM-ht-4rK" secondAttribute="leading" id="S94-HT-7Y5"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yj-gC-0Ma">
+                                <rect key="frame" x="15" y="35" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="WOt-24-J9h"/>
+                                    <constraint firstAttribute="height" constant="30" id="hvN-xp-faD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="close_button"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="yLO-EG-d8f" eventType="touchUpInside" id="S7i-vn-esg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pdM-2A-G42" firstAttribute="bottom" secondItem="d3n-Ux-L3C" secondAttribute="bottom" id="3VZ-xV-pBu"/>
+                            <constraint firstItem="pdM-2A-G42" firstAttribute="top" secondItem="B4d-0k-UNr" secondAttribute="top" id="6Tq-Sg-jrO"/>
+                            <constraint firstItem="0yj-gC-0Ma" firstAttribute="top" secondItem="d3n-Ux-L3C" secondAttribute="top" constant="15" id="EjJ-r7-Rdd"/>
+                            <constraint firstItem="pdM-2A-G42" firstAttribute="trailing" secondItem="d3n-Ux-L3C" secondAttribute="trailing" id="cLv-LH-EpK"/>
+                            <constraint firstItem="0yj-gC-0Ma" firstAttribute="leading" secondItem="d3n-Ux-L3C" secondAttribute="leading" constant="15" id="d6f-A1-vDF"/>
+                            <constraint firstItem="pdM-2A-G42" firstAttribute="leading" secondItem="d3n-Ux-L3C" secondAttribute="leading" id="tVF-Ge-y6g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d3n-Ux-L3C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ign-LU-dly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close_button" width="50" height="50"/>
+        <image name="dog" width="137" height="91"/>
+    </resources>
+</document>
