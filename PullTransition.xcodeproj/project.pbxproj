@@ -15,6 +15,7 @@
 		178C343920399C00003A3D78 /* PullDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C343820399C00003A3D78 /* PullDismissAnimator.swift */; };
 		178C343B20399F0D003A3D78 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C343A20399F0D003A3D78 /* Interactor.swift */; };
 		178C343E20399F7B003A3D78 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C343D20399F7B003A3D78 /* ModalViewController.swift */; };
+		178C3445203B083E003A3D78 /* ModalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C3444203B083E003A3D78 /* ModalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		178C343820399C00003A3D78 /* PullDismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDismissAnimator.swift; sourceTree = "<group>"; };
 		178C343A20399F0D003A3D78 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		178C343D20399F7B003A3D78 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		178C3444203B083E003A3D78 /* ModalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				178C343D20399F7B003A3D78 /* ModalViewController.swift */,
+				178C3444203B083E003A3D78 /* ModalTableViewController.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				178C342420399977003A3D78 /* TopViewController.swift in Sources */,
 				178C343E20399F7B003A3D78 /* ModalViewController.swift in Sources */,
 				178C342220399977003A3D78 /* AppDelegate.swift in Sources */,
+				178C3445203B083E003A3D78 /* ModalTableViewController.swift in Sources */,
 				178C343B20399F0D003A3D78 /* Interactor.swift in Sources */,
 				178C343920399C00003A3D78 /* PullDismissAnimator.swift in Sources */,
 			);

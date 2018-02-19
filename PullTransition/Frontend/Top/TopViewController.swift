@@ -26,6 +26,17 @@ final class TopViewController: UIViewController {
         vc.modalPresentationStyle = .currentContext
         present(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func iOS9TableViewButtonTapped(_ sender: UIButton) {
+        let storyboard: UIStoryboard = self.storyboard!
+        guard let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ModalTableViewController.self)) as? ModalTableViewController else {
+            return
+        }
+        vc.interactor = interactor
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .currentContext
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension TopViewController: UIViewControllerTransitioningDelegate {
